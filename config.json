@@ -1,0 +1,42 @@
+{
+  "programs": {
+    "winget": [
+      "Figma.Figma",
+      "Figma.fonthelper",
+      "voidtools.Everything",
+      "Microsoft.VisualStudioCode",
+      "Google.Chrome",
+      "Mozilla.Firefox",
+      "Notepad++.Notepad++",
+      "7zip.7zip",
+      "WinDirStat.WinDirStat",
+      "Twilio.Authy",
+      "Zotero.Zotero",
+      "Google.Drive",
+      "Telegram.TelegramDesktop",
+      "Discord.Discord"
+    ],
+    "msstore": {
+      "Spotify": "9NCBCSZSJRSB",
+      "Windows Terminal": "9N0DX20HK701",
+      "Netflix": "9WZDNCRFJ3TJ",
+      "Python 3.10": "9PJPW5LDXLZ5"
+    }
+  },
+  "dirsToCreate": [
+    "D:\\repos",
+    "D:\\temp",
+    "D:\\temp\\downloads",
+    "D:\\media\\music",
+    "D:\\media\\videos",
+    "D:\\media\\pictures"
+  ],
+  "defaultPaths": {
+    "Desktop": "D:\\desktop",
+    "Documents": "D:\\docs",
+    "Downloads": "D:\\temp\\downloads",
+    "Music": "D:\\media\\music",
+    "Videos": "D:\\media\\videos",
+    "Pictures": "D:\\media\\pictures"
+  }
+}

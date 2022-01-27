@@ -1,0 +1,316 @@
+{
+  /// Editor
+  "editor.fontFamily": "Jetbrains Mono, Consolas, 'Courier New', monospace", // https://www.jetbrains.com/lp/mono/
+  "editor.semanticHighlighting.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "telemetry.telemetryLevel": "error",
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.external.windowsExec": "wt", // https://aka.ms/terminal
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
+  "workbench.iconTheme": "material-icon-theme", // https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+  "workbench.startupEditor": "newUntitledFile",
+  // Color Theme
+  "workbench.colorCustomizations": {
+    // Solo cambia los colores si se encuentra en Dark+
+    "[Default Dark+]": {
+      // Barra de la ventana
+      "titleBar.activeBackground": "#15151f",
+      "titleBar.inactiveBackground": "#101018",
+      // Barra lateral
+      "sideBar.background": "#202029",
+      "activityBar.activeBackground": "#19192e",
+      "activityBar.background": "#15151f",
+      // Tabs
+      "editorGroupHeader.tabsBackground": "#1d1d2a",
+      "tab.activeBackground": "#19192e",
+      "tab.inactiveBackground": "#15151f",
+      "tab.border": "#1a1a25",
+      "tab.activeBorder": "#da5700",
+      // Editor
+      "editor.background": "#18181f",
+      // Barra de estado
+      "statusBar.background": "#161616",
+      "statusBar.noFolderBackground": "#232335"
+    }
+  },
+  "[erb.html]": {
+    "editor.autoClosingBrackets": "never",
+  },
+  /// Bracket Pair Colorizer 2
+  "editor.bracketPairColorization.enabled": true,
+  /// Files config
+  "files.associations": {
+    "*.ui": "xml",
+    "*.js": "javascript",
+    "*.lp": "asp"
+  },
+  /// Python
+  "python.formatting.provider": "black",
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "pylint",
+  "python.pythonPath": "python3",
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.terminal.executeInFileDir": false,
+  "python.linting.pylintArgs": [
+    "--extension-pkg-whitelist=PySide6"
+  ],
+  "[python]": {
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#72727260"
+      },
+      {
+        "column": 100,
+        "color": "#ff000060"
+      }
+    ]
+  },
+  // Ruby
+  // El linter de la extención 'Ruby' se ejecuta en cada cambio,
+  // lo que puede causar que VSCode funcione muy lento
+  "ruby.lint": {},
+  // Dejar a la extención 'ruby-rubocop' para lintear al guardar
+  "ruby.rubocop.onSave": true,
+  "ruby.rubocop.configFilePath": ".rubocop.yml",
+  // Dejar intellisense a 'solargraph'
+  // "ruby.intellisense": false,
+  "[ruby]": {
+    // "editor.defaultFormatter": "castwide.solargraph",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.rulers": [
+      {
+        "column": 100,
+        "color": "#72727260"
+      },
+      {
+        "column": 120,
+        "color": "#ff000060"
+      }
+    ]
+  },
+  // Otros cambios a WSL:
+  /// git
+  "[git_comit]": {
+    "editor.rulers": [
+      50
+    ]
+  },
+  /// Markdown
+  "[markdown]": {
+    "editor.rulers": [
+      {
+        "column": 70,
+        "color": "#72727260"
+      }
+    ],
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  // Markdown lint
+  "markdown.extension.syntax.decorations": true,
+  "markdown.extension.tableFormatter.normalizeIndentation": false,
+  "markdown.extension.toc.downcaseLink": false,
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.updateOnSave": false,
+  "markdownlint.config": {
+    "MD026": false,
+    "MD012": false
+  },
+  /// rainbow CSV
+  "rainbow_csv.csv_lint_detect_trailing_spaces": true,
+  "rainbow_csv.enable_context_menu_head": false,
+  "rainbow_csv.enable_tooltip_column_names": false,
+  "rainbow_csv.enable_tooltip": false,
+  /// Better comments
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#569cd6",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "~",
+      "color": "#9c9c9c96",
+      "underline": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  // GitLens
+  "gitlens.codeLens.enabled": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.annotations.enabled": false,
+  "gitlens.hovers.annotations.changes": false,
+  "gitlens.hovers.currentLine.changes": false,
+  // LiveServer
+  "liveServer.settings.donotShowInfoMsg": true,
+  /// Ortografía
+  "spellright.notificationClass": "information",
+  "spellright.language": [
+    "en",
+    "es"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "python",
+    "yaml",
+    "ruby",
+    "julia",
+    "juliamarkdown"
+  ],
+  "cSpell.spellCheckDelayMs": 100,
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.userWords": [
+    "a",
+    "activerecord",
+    "Asincrónicamente",
+    "autenticación",
+    "Ayudant",
+    "Ayudantía",
+    "ayudantías",
+    "benjavicente",
+    "collapsable",
+    "ésima",
+    "Formik",
+    "geoespacial",
+    "goecke",
+    "indentado",
+    "infograf",
+    "Infografi",
+    "infografía",
+    "mantención",
+    "middlewares",
+    "navbars",
+    "osuc",
+    "pandemia",
+    "pydantic",
+    "recursivamente",
+    "reduxjs",
+    "semanticamente",
+    "sima",
+    "SSHFS",
+    "strikethrough",
+    "struct",
+    "urlunsplit"
+  ],
+  "cSpell.enableFiletypes": [
+    "haml",
+    "julia"
+  ],
+  // Other config
+  "prettier.printWidth": 120,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "svipas.prettier-plus",
+    "editor.linkedEditing": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.suggestSelection": "first",
+  "explorer.confirmDragAndDrop": false,
+  "jupyter.interactiveWindowMode": "perFile",
+  "jupyter.alwaysTrustNotebooks": true,
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "julia.enableTelemetry": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "cSpell.language": "es,en,en-GB,en-US,es-ES",
+  "yaml.schemas": {
+    "file:///toc.schema.json": "/toc\\.yml/i"
+  },
+  "svg.preview.mode": "svg",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "git-rebase-todo": "default"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "remote.SSH.remotePlatform": {
+    "codd.ing.puc.cl": "linux"
+  },
+  "sqltools.highlightQuery": false,
+  "sqltools.format": {
+    "linesBetweenQueries": 2,
+    "reservedWordCase": "upper",
+    "language": "sql"
+  },
+  "latex-workshop.message.update.show": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "never",
+  "workbench.editor.untitled.hint": "hidden",
+  "jupyter.askForKernelRestart": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.exclude": {
+    "**/.DS_Store": false,
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "julia.symbolCacheDownload": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "notebook.lineNumbers": "on",
+  "notebook.cellToolbarVisibility": "hover",
+  "[css]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "svipas.prettier-plus"
+  },
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "window.zoomLevel": -1,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
