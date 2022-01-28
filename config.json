@@ -24,8 +24,10 @@
     }
   },
   "dirsToCreate": [
+    "D:\\desktop",
     "D:\\repos",
     "D:\\temp",
+    "D:\\docs",
     "D:\\temp\\downloads",
     "D:\\media\\music",
     "D:\\media\\videos",

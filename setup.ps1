@@ -24,7 +24,7 @@ if (@(winget --version)-le "v1.1") {
 }
 
 # Fisrts lets debloat windows
-Import-Module .\utils\Debloater.ps1
+Import-Module .\utils\Debloater.psm1
 
 UnincstallOneDrive
 DebloatBlacklist
