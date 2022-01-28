@@ -79,3 +79,8 @@ If (Test-Path $Search) {
 
 # Run the SSH agent automatically
 Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
+
+# Show hidden and extentions files by default
+$Explorer = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+Set-ItemProperty -Path $Explorer -Name Hidden -Value 0
+Set-ItemProperty -Path $Explorer -Name HideFileExt -Value 0
