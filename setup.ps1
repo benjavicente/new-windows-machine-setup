@@ -11,6 +11,15 @@ My personalized script to migrate to a new Windows PC.
 I don'tt migrate fron PC's often, o this script might get updated or be incomplete.
 #>
 
+function Install-Program {
+  param (
+    [Parameter(Mandatory=$true)][String]$id,
+    [String]$name = $id
+  )
+  Write-Output "installing $name"
+  winget install --id $id --silent
+}
+
 # Befor this runs, winget should be installed
 if ($null -eq (Get-Command "winget" -ErrorAction SilentlyContinue)) {
     Write-Output "Winget wasn't found, opening link to instaling it..."
