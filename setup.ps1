@@ -76,6 +76,9 @@ If (Test-Path $Search) {
     Set-ItemProperty $Search AllowCortana -Value 0
 }
 
+# Hide sarchbar
+$SearchBar = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
+Set-ItemProperty $SearchBar SearchboxTaskbarMode -Value 0
 
 # Run the SSH agent automatically
 Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
