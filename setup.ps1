@@ -75,3 +75,6 @@ If (Test-Path $Search) {
     Set-ItemProperty $Search AllowCortana -Value 0
 }
 
+
+# Run the SSH agent automatically
+Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
