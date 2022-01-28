@@ -13,7 +13,8 @@ I don'tt migrate fron PC's often, o this script might get updated or be incomple
 
 # Befor this runs, winget should be installed
 if ($null -eq (Get-Command "winget" -ErrorAction SilentlyContinue)) {
-    Write-Output "Winget wasn't found"
+    Write-Output "Winget wasn't found, opening link to instaling it..."
+    Start-Process "https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1"
     exit 1
 }
 
