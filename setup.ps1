@@ -53,21 +53,6 @@ foreach ($category in $config.defaultPaths.PSObject.Properties) {
     Set-KnownFolderPath -KnownFolder $category.Name -Path $category.Value
 }
 
-# Install programs with winget
-foreach ($category in $config.programs.PSObject.Properties) {
-    $value = $category.Value
-    if ($value -is [System.Object[]]) {
-        foreach ($id in $value) {
-            Install-Program $id $id
-        }
-    }
-    elseif ($value -is [System.Management.Automation.PSCustomObject]) {
-        foreach ($element in $value.PSObject.Properties) {
-            Install-Program $element.Value $element.Name
-        }
-    }
-}
-
 # Aditional userfull configuration found online
 # from https://github.com/Sycnex/Windows10Debloater
 
@@ -96,3 +81,19 @@ Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
 $Explorer = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
 Set-ItemProperty -Path $Explorer -Name Hidden -Value 0
 Set-ItemProperty -Path $Explorer -Name HideFileExt -Value 0
+
+
+# Install programs with winget
+foreach ($category in $config.programs.PSObject.Properties) {
+  $value = $category.Value
+  if ($value -is [System.Object[]]) {
+      foreach ($id in $value) {
+          Install-Program $id $id
+      }
+  }
+  elseif ($value -is [System.Management.Automation.PSCustomObject]) {
+      foreach ($element in $value.PSObject.Properties) {
+          Install-Program $element.Value $element.Name
+      }
+  }
+}
